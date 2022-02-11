@@ -1,0 +1,38 @@
+.left-side {
+  display: flex;
+  flex-direction: column;
+  width: 9%;
+  //background-color: mediumpurple;
+  align-items: center;
+  justify-content: flex-end;
+  height: auto;
+}
+
+
+.bottom-left-nav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  width: 4vh;
+  height: 15vh;
+  bottom: 0;
+  position: sticky;
+
+  .line {
+    height: 10vh;
+  }
+
+  .icon {
+    width: 1.8vh;
+    height: 1.8vh;
+    padding: 8px;
+    cursor: pointer;
+  }
+
+
+  //iconku na hover vlozit filter na modru farbu
+  //zmena farby obrazka
+  //nadstavenie 
+
+}

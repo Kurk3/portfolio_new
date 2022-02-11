@@ -1,0 +1,55 @@
+.entry-section {
+  margin-top: 30vh;
+  margin-bottom: 60vh;
+
+  h1 {
+    font-family: $normaltext_font;
+    color: $normaltext_color;
+    padding: 0.5vh;
+    font-size: 3.5rem;
+  }
+
+  h3 {
+    font-family: $mono_font;
+    font-size: 3rem;
+    color: $texthighlight_color;
+    padding: 0.5vh;
+    font-weight: normal;
+  }
+
+  h2 {
+    font-family: $normaltext_font;
+    font-size: 1.3rem;
+    color: $graytext_color;
+    padding-top: 1vh;
+    padding-left: 0.5vw;
+  }
+
+  a {
+    text-align: center;
+    margin: 15px 5px 15px 5px;
+    border-radius: 3px;
+    position: relative;
+    border: 2px solid $texthighlight_color;
+    padding: 15px 45px 15px 45px;
+    color: #64FFDA;
+    top: 5vh;
+    text-decoration: none;
+    font-family: $mono_font;
+
+
+
+    &:hover {
+      transition: 0.4s;
+      background-color: $texthighlight_color;
+      color: $background_color;
+    }
+  }
+
+
+}
+
+.align-left {
+  margin-left: 1em;
+
+}

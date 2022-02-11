@@ -1,0 +1,2109 @@
+html, body {
+  width: 100%;
+  height: 100%;
+  margin: 0px;
+  padding: 0px;
+  overflow-x: hidden;
+}
+
+.hover-underline-animation {
+  display: inline-block;
+  position: relative;
+}
+
+.hover-underline-animation:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #64FFDA;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.invincible {
+  visibility: hidden;
+}
+
+.hover-underline-animation:hover:after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  background-color: #0A192F;
+}
+
+.sectional-brake {
+  height: 30vh;
+  width: auto;
+}
+
+.navbar .icon {
+  display: none;
+}
+
+/* Add a black background color to the top navigation */
+.topnav {
+  background-color: #0A192F;
+  overflow: hidden;
+  margin-left: 4.5rem;
+  margin-top: 0.5rem;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+  float: left;
+  display: block;
+  color: white;
+  font-family: "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono", monospace;
+  font-size: 0.7rem;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+.topnav a span {
+  font-family: "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono", monospace;
+  font-size: 0.5rem;
+  color: #64FFDA;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+  color: #64FFDA;
+  transition: 0.75s;
+}
+
+/* Add an active class to highlight the current page */
+.topnav a.active {
+  background-color: #04AA6D;
+  color: white;
+}
+
+/* Hide the link that should open and close the topnav on small screens */
+.topnav .icon {
+  display: none;
+}
+
+/* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
+@media screen and (max-width: 600px) {
+  .topnav a:not(:first-child) {
+    display: none;
+  }
+
+  .topnav a.icon {
+    float: right;
+    display: block;
+  }
+}
+/* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
+@media screen and (max-width: 600px) {
+  .topnav.responsive {
+    position: relative;
+  }
+
+  .topnav.responsive a.icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+}
+.left-side {
+  display: flex;
+  flex-direction: column;
+  width: 9%;
+  align-items: center;
+  justify-content: flex-end;
+  height: auto;
+}
+
+.bottom-left-nav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  width: 4vh;
+  height: 15vh;
+  bottom: 0;
+  position: sticky;
+}
+.bottom-left-nav .line {
+  height: 10vh;
+}
+.bottom-left-nav .icon {
+  width: 1.8vh;
+  height: 1.8vh;
+  padding: 8px;
+  cursor: pointer;
+}
+
+.right-side {
+  display: flex;
+  flex-direction: column;
+  width: 9%;
+  align-items: center;
+  justify-content: flex-end;
+  height: auto;
+}
+
+.bottom-right-nav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  width: 4vh;
+  height: 15vh;
+  position: sticky;
+  bottom: 0;
+}
+.bottom-right-nav .line {
+  height: 10vh;
+}
+.bottom-right-nav .icon {
+  width: 1.8vh;
+  height: 1.8vh;
+  padding: 8px;
+  cursor: pointer;
+}
+.bottom-right-nav a {
+  color: #C5C6C7;
+  writing-mode: vertical-rl;
+  text-orientation: sideways;
+  padding: 1.5vh;
+  font-family: "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono", monospace;
+  cursor: pointer;
+  font-size: 0.8rem;
+  text-decoration: none;
+}
+
+@media (max-width: 450px) {
+  .right-side {
+    visibility: collapse;
+  }
+
+  .left-side {
+    visibility: collapse;
+  }
+
+  .container {
+    width: 100%;
+  }
+}
+.entry-section {
+  margin-top: 30vh;
+  margin-bottom: 60vh;
+}
+.entry-section h1 {
+  font-family: "Calibre", "Inter", "San Francisco", "SF Pro Text", -apple-system, system-ui, sans-serif;
+  color: white;
+  padding: 0.5vh;
+  font-size: 3.5rem;
+}
+.entry-section h3 {
+  font-family: "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono", monospace;
+  font-size: 3rem;
+  color: #64FFDA;
+  padding: 0.5vh;
+  font-weight: normal;
+}
+.entry-section h2 {
+  font-family: "Calibre", "Inter", "San Francisco", "SF Pro Text", -apple-system, system-ui, sans-serif;
+  font-size: 1.3rem;
+  color: #C5C6C7;
+  padding-top: 1vh;
+  padding-left: 0.5vw;
+}
+.entry-section a {
+  text-align: center;
+  margin: 15px 5px 15px 5px;
+  border-radius: 3px;
+  position: relative;
+  border: 2px solid #64FFDA;
+  padding: 15px 45px 15px 45px;
+  color: #64FFDA;
+  top: 5vh;
+  text-decoration: none;
+  font-family: "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono", monospace;
+}
+.entry-section a:hover {
+  transition: 0.4s;
+  background-color: #64FFDA;
+  color: #0A192F;
+}
+
+.align-left {
+  margin-left: 1em;
+}
+
+.about-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 80vh;
+  margin-top: 7vw;
+  margin-bottom: 15vw;
+}
+.about-section .heading_line {
+  display: flex;
+  height: auto;
+  width: auto;
+  align-items: center;
+  margin-bottom: 3rem;
+}
+.about-section .highlight-text {
+  color: #64FFDA;
+  font-family: "Calibre", "Inter", "San Francisco", "SF Pro Text", -apple-system, system-ui, sans-serif;
+}
+.about-section .line {
+  width: 300px;
+  height: 2px;
+  padding: 1rem;
+}
+.about-section h1 {
+  font-family: "Calibre", "Inter", "San Francisco", "SF Pro Text", -apple-system, system-ui, sans-serif;
+  color: white;
+  font-size: 1.8rem;
+}
+.about-section .heading-line-text {
+  display: flex;
+  height: auto;
+  align-items: center;
+}
+.about-section .blog-about-me {
+  text-decoration: none;
+  font-family: "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono", monospace;
+  color: #64FFDA;
+  font-size: 1.2rem;
+  text-space: 0.1rem;
+  font-weight: 800;
+}
+
+.main_highlight {
+  font-size: 1rem;
+  padding: 0.5vh;
+  font-family: "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono", monospace;
+  font-weight: lighter;
+  color: #64FFDA;
+}
+
+.content-about-page {
+  display: flex;
+  width: auto;
+}
+.content-about-page .text {
+  width: auto;
+}
+.content-about-page p {
+  font-family: "Calibre", "Inter", "San Francisco", "SF Pro Text", -apple-system, system-ui, sans-serif;
+  color: white;
+  padding: 1.3vh;
+  font-size: 1.2rem;
+  line-height: 1.8;
+}
+
+.picture {
+  display: flex;
+  height: 50vh;
+  position: relative;
+  width: 50%;
+  padding: 5vh;
+  overflow: visible;
+}
+.picture .front {
+  height: 20vh;
+  max-width: 21vh;
+  width: 100%;
+  background-color: #0A192F;
+  border-radius: 4px;
+  border: #64FFDA 2px solid;
+  position: absolute;
+  margin-bottom: 12px;
+}
+.picture .back {
+  height: auto;
+  max-width: 20vh;
+  margin-top: 25px;
+  width: 100%;
+  position: absolute;
+  border-radius: 3px;
+  margin-left: -2.5vh;
+  overflow: visible;
+}
+
+.low-color {
+  height: auto;
+  max-width: 20vh;
+  margin-top: 25px;
+  width: 100%;
+  position: absolute;
+  border-radius: 3px;
+  margin-left: -2.5vh;
+  overflow: visible;
+}
+
+.low-color:hover {
+  background-color: #64FFDA;
+  transition: 1s;
+}
+
+.text-highlight {
+  color: #64FFDA;
+}
+
+@media (max-width: 845px) {
+  .content-about-page {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .text {
+    width: auto;
+  }
+
+  .picture {
+    width: 30%;
+  }
+
+  .heading_line {
+    align-items: center;
+    justify-content: center;
+  }
+  .heading_line img {
+    display: none;
+  }
+}
+.service-container {
+  display: flex;
+  margin-left: 15vh;
+  margin-right: 15vh;
+  margin-bottom: 15px;
+  justify-content: space-between;
+}
+.service-container .service-element {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  top: 3vh;
+  left: 1.7vh;
+  z-index: 4;
+  width: 25vh;
+  height: 25vh;
+  margin: 0.5vh;
+  background-color: #112240;
+}
+.service-container .service-element-background {
+  width: 25vh;
+  height: 25vh;
+  position: absolute;
+  left: 4vh;
+  bottom: 2vh;
+  background-color: #64FFDA;
+}
+.service-container .service-element-background-line {
+  width: 25vh;
+  height: 25vh;
+  position: absolute;
+  left: 4vh;
+  bottom: 2vh;
+  background-color: #0A192F;
+  border: #64FFDA 2px solid;
+}
+.service-container .service-small-container {
+  margin: 0.5vh;
+  position: relative;
+  width: 29vh;
+  height: 29vh;
+}
+.service-container img {
+  transition: 0.3s;
+  width: 100%;
+  height: auto;
+  max-width: 11vh;
+  background-color: inherit;
+  padding: 1.5vh;
+}
+.service-container h2 {
+  color: white;
+  background-color: inherit;
+  font-family: "Calibre", "Inter", "San Francisco", "SF Pro Text", -apple-system, system-ui, sans-serif;
+  font-size: 1.1rem;
+}
+.service-container .highlight-text-heading {
+  color: #64FFDA;
+  font-family: "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono", monospace;
+  font-size: 0.9rem;
+  transition: 0.5s;
+  background-color: inherit;
+}
+.service-container p {
+  font-family: "Calibre", "Inter", "San Francisco", "SF Pro Text", -apple-system, system-ui, sans-serif;
+  font-size: 0.9rem;
+  color: white;
+  padding: 0.8rem;
+  transition: 0.2ms linear;
+  background-color: inherit;
+}
+.service-container .bulletpoint {
+  color: #64FFDA;
+  font-family: "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono", monospace;
+  font-size: 1rem;
+  margin-left: 0.1vw;
+  margin-right: 0.5vw;
+  transition: 0.5s;
+  background-color: inherit;
+}
+.service-container .highlight-text {
+  color: #64FFDA;
+  font-family: "Calibre", "Inter", "San Francisco", "SF Pro Text", -apple-system, system-ui, sans-serif;
+  font-size: 0.9rem;
+  transition: 0.5s;
+  background-color: inherit;
+}
+
+.round_buttons {
+  background-color: inherit;
+  display: flex;
+  margin: 1vh;
+  align-items: center;
+}
+.round_buttons .button1 {
+  content: "click me";
+  width: 20px;
+  border: none;
+  transition: 0.2s linear;
+  height: 20px;
+  margin: 0.3vh 0.3vw;
+  border-radius: 50%;
+  background-color: #64FFDA;
+  cursor: pointer;
+}
+.round_buttons .button2 {
+  content: "click me";
+  width: 20px;
+  height: 20px;
+  transition: 0.2s;
+  margin: 0.3vh 0.3vw;
+  border-radius: 50%;
+  background-color: #112240;
+  border: 0.2vh solid #64FFDA;
+  cursor: pointer;
+}
+
+.services-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.services-section .heading_line {
+  display: flex;
+  height: auto;
+  width: auto;
+  align-items: center;
+  margin-bottom: 3rem;
+}
+.services-section h1 {
+  font-family: "Calibre", "Inter", "San Francisco", "SF Pro Text", -apple-system, system-ui, sans-serif;
+  color: white;
+  font-size: 1.8rem;
+}
+.services-section .highlight-text {
+  font-size: 0.7rem;
+}
+.services-section p {
+  font-size: 0.7rem;
+}
+.services-section .line {
+  width: 30vh;
+  height: 2px;
+  padding: 1vh;
+}
+
+.rownum1 {
+  display: flex;
+}
+
+.rownum2 {
+  display: flex;
+}
+
+@media (max-width: 1506px) {
+  .rownum1 {
+    display: inline-block;
+  }
+
+  .rownum2 {
+    display: inline-block;
+  }
+}
+@media (max-width: 670px) {
+  .service-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .rownum1 {
+    display: inline-block;
+  }
+
+  .rownum2 {
+    display: inline-block;
+  }
+}
+.container {
+  margin-top: 30px;
+  display: flex;
+  height: 1300vh;
+  width: 100%;
+}
+
+.center-content {
+  display: flex;
+  width: 82%;
+  flex-direction: column;
+}
+
+.brake {
+  height: 20vh;
+  width: auto;
+}
+
+.heading_line2 {
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  height: 10vh;
+  width: auto;
+}
+.heading_line2 .line {
+  width: 50vh;
+  padding: 3rem;
+}
+.heading_line2 h1 {
+  color: white;
+  background-color: inherit;
+  font-family: "Calibre", "Inter", "San Francisco", "SF Pro Text", -apple-system, system-ui, sans-serif;
+  font-size: 2rem;
+}
+.heading_line2 h6 {
+  font-family: "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono", monospace;
+  color: #64FFDA;
+  font-size: 0.8rem;
+}
+
+.work-process {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.work-process-flex {
+  display: flex;
+  height: auto;
+  flex-direction: column;
+}
+.work-process-flex h1 {
+  margin: 1vh;
+  font-size: 1rem;
+  color: white;
+  background-color: inherit;
+  font-family: "Calibre", "Inter", "San Francisco", "SF Pro Text", -apple-system, system-ui, sans-serif;
+}
+.work-process-flex h2 {
+  font-size: 0.5rem;
+  color: #64FFDA;
+  font-family: "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono", monospace;
+  background-color: inherit;
+}
+.work-process-flex img {
+  background-color: inherit;
+  height: auto;
+  width: 100%;
+  max-width: 8vh;
+}
+.work-process-flex .work-process-row1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 28vh;
+  padding: 1vh 1vw;
+}
+.work-process-flex .work-process-row2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 28vh;
+  padding: 10px;
+}
+.work-process-flex .work-process-row3 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 28vh;
+  padding: 1vh 1vw;
+}
+.work-process-flex .work-process-container {
+  position: relative;
+  margin: 3vh;
+}
+.work-process-flex .work-process-element {
+  display: flex;
+  align-items: center;
+  width: 24vh;
+  height: 24vh;
+  background-color: #64FFDA;
+  z-index: 10;
+}
+.work-process-flex .work-process-element-final {
+  display: flex;
+  align-items: center;
+  width: 24vh;
+  height: 24vh;
+  border: 2px #64FFDA;
+  background-color: #0A192F;
+  z-index: 10;
+}
+.work-process-flex .work-process-background {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  width: 24vh;
+  cursor: pointer;
+  height: 24vh;
+  background-color: #112240;
+  position: absolute;
+  top: 1.5vh;
+  right: 1.5vh;
+  bottom: 2vh;
+}
+.work-process-flex .work-process-element-outline {
+  display: flex;
+  align-items: center;
+  width: 24vh;
+  height: 24vh;
+  background-color: #0A192F;
+  border: 1px solid #64FFDA;
+  z-index: 10;
+}
+.work-process-flex div#line1 h1#a {
+  display: inline;
+}
+.work-process-flex div#line1:hover h1#a {
+  display: none;
+  transition: opacity 0.3s;
+}
+.work-process-flex div#line1:hover img#a {
+  display: none;
+}
+.work-process-flex div#line1:hover h2#a {
+  display: none;
+  transition: opacity 0.3s;
+}
+.work-process-flex div#line1 h1#b {
+  display: none;
+}
+.work-process-flex div#line1 p#b {
+  display: none;
+}
+.work-process-flex div#line1:hover p#b {
+  display: inline;
+  transition: opacity 0.3s;
+}
+.work-process-flex div#line1:hover img#b {
+  display: none;
+}
+.work-process-flex div#line1 h3#b {
+  display: none;
+}
+.work-process-flex div#line1:hover h3#b {
+  display: inline;
+  transition: opacity 0.3s;
+}
+.work-process-flex div#line1 h3#span {
+  display: none;
+}
+.work-process-flex div#line1:hover h3#span {
+  display: inline;
+  transition: opacity 0.3s;
+}
+.work-process-flex div#line2 h1#a {
+  display: inline;
+}
+.work-process-flex div#line2:hover h1#a {
+  display: none;
+  transition: opacity 0.3s;
+}
+.work-process-flex div#line2:hover img#a {
+  display: none;
+}
+.work-process-flex div#line2:hover h2#a {
+  display: none;
+  transition: opacity 0.3s;
+}
+.work-process-flex div#line2 h1#b {
+  display: none;
+}
+.work-process-flex div#line2 p#b {
+  display: none;
+}
+.work-process-flex div#line2:hover p#b {
+  display: inline;
+  transition: opacity 0.3s;
+}
+.work-process-flex div#line2:hover img#b {
+  display: none;
+}
+.work-process-flex div#line2 h3#b {
+  display: none;
+}
+.work-process-flex div#line2:hover h3#b {
+  display: inline;
+  transition: opacity 0.3s;
+}
+.work-process-flex div#line2 h3#span {
+  display: none;
+}
+.work-process-flex div#line2:hover h3#span {
+  display: inline;
+  transition: opacity 0.3s;
+}
+.work-process-flex div#line3 h1#a {
+  display: inline;
+}
+.work-process-flex div#line3:hover h1#a {
+  display: none;
+  transition: opacity 0.3s;
+}
+.work-process-flex div#line3:hover img#a {
+  display: none;
+}
+.work-process-flex div#line3:hover h2#a {
+  display: none;
+  transition: opacity 0.3s;
+}
+.work-process-flex div#line3 h1#b {
+  display: none;
+}
+.work-process-flex div#line3 p#b {
+  display: none;
+}
+.work-process-flex div#line3:hover p#b {
+  display: inline;
+  transition: opacity 0.3s;
+}
+.work-process-flex div#line3:hover img#b {
+  display: none;
+}
+.work-process-flex div#line3 h3#b {
+  display: none;
+}
+.work-process-flex div#line3:hover h3#b {
+  display: inline;
+  transition: opacity 0.3s;
+}
+.work-process-flex div#line3 h3#span {
+  display: none;
+}
+.work-process-flex div#line3:hover h3#span {
+  display: inline;
+  transition: opacity 0.3s;
+}
+.work-process-flex div#line4 h1#a {
+  display: inline;
+}
+.work-process-flex div#line4:hover h1#a {
+  display: none;
+  transition: opacity 0.3s;
+}
+.work-process-flex div#line4:hover img#a {
+  display: none;
+}
+.work-process-flex div#line4:hover h2#a {
+  display: none;
+  transition: opacity 0.3s;
+}
+.work-process-flex div#line4 h1#b {
+  display: none;
+}
+.work-process-flex div#line4 p#b {
+  display: none;
+}
+.work-process-flex div#line4:hover p#b {
+  display: inline;
+  transition: opacity 0.3s;
+}
+.work-process-flex div#line4:hover img#b {
+  display: none;
+}
+.work-process-flex div#line4 h3#b {
+  display: none;
+}
+.work-process-flex div#line4:hover h3#b {
+  display: inline;
+  transition: opacity 0.3s;
+}
+.work-process-flex div#line4 h3#span {
+  display: none;
+}
+.work-process-flex div#line4:hover h3#span {
+  display: inline;
+  transition: opacity 0.3s;
+}
+.work-process-flex div#line5 h1#a {
+  display: inline;
+}
+.work-process-flex div#line5:hover h1#a {
+  display: none;
+  transition: opacity 0.3s;
+}
+.work-process-flex div#line5:hover img#a {
+  display: none;
+}
+.work-process-flex div#line5:hover h2#a {
+  display: none;
+  transition: opacity 0.3s;
+}
+.work-process-flex div#line5 h1#b {
+  display: none;
+}
+.work-process-flex div#line5 p#b {
+  display: none;
+}
+.work-process-flex div#line5:hover p#b {
+  display: inline;
+  transition: opacity 0.3s;
+}
+.work-process-flex div#line5:hover img#b {
+  display: none;
+}
+.work-process-flex div#line5 h3#b {
+  display: none;
+}
+.work-process-flex div#line5:hover h3#b {
+  display: inline;
+  transition: opacity 0.3s;
+}
+.work-process-flex div#line5 h3#span {
+  display: none;
+}
+.work-process-flex div#line5:hover h3#span {
+  display: inline;
+  transition: opacity 0.3s;
+}
+.work-process-flex div#line6 h1#a {
+  display: inline;
+}
+.work-process-flex div#line6:hover h1#a {
+  display: none;
+  transition: opacity 0.3s;
+}
+.work-process-flex div#line6:hover img#a {
+  display: none;
+}
+.work-process-flex div#line6:hover h2#a {
+  display: none;
+  transition: opacity 0.3s;
+}
+.work-process-flex div#line6 h1#b {
+  display: none;
+}
+.work-process-flex div#line6 p#b {
+  display: none;
+}
+.work-process-flex div#line6:hover p#b {
+  display: inline;
+  transition: opacity 0.3s;
+}
+.work-process-flex div#line6:hover img#b {
+  display: none;
+}
+.work-process-flex div#line6 h3#b {
+  display: none;
+}
+.work-process-flex div#line6:hover h3#b {
+  display: inline;
+  transition: opacity 0.3s;
+}
+.work-process-flex div#line6 h3#span {
+  display: none;
+}
+.work-process-flex div#line6:hover h3#span {
+  display: inline;
+  transition: opacity 0.3s;
+}
+.work-process-flex p {
+  font-family: "Calibre", "Inter", "San Francisco", "SF Pro Text", -apple-system, system-ui, sans-serif;
+  background-color: inherit;
+  font-size: 0.8rem;
+  color: white;
+}
+.work-process-flex h3 {
+  color: white;
+  font-family: "Calibre", "Inter", "San Francisco", "SF Pro Text", -apple-system, system-ui, sans-serif;
+  margin: 0.5vh;
+  font-size: 1rem;
+  background-color: inherit;
+}
+.work-process-flex .text-highlight-work-process {
+  font-family: "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono", monospace;
+  color: #64FFDA;
+  font-size: 0.8rem;
+  padding: 3px;
+  background-color: inherit;
+}
+
+.work-process-element-text {
+  text-align: left;
+  background-color: inherit;
+  margin: 0.5vh;
+  margin-left: 0.5vw;
+  margin-right: 0.5vw;
+  margin-top: 0.1vh;
+  margin-bottom: 0.3vh;
+}
+
+.work-process-heading {
+  display: flex;
+  flex-direction: column;
+  width: 20em;
+  padding: 2em;
+  padding-right: 0;
+}
+
+@media (max-width: 1122px) {
+  .work-process-flex {
+    display: block;
+  }
+  .work-process-flex .work-process-row1 {
+    flex-direction: column;
+    height: auto;
+  }
+  .work-process-flex .work-process-row2 {
+    flex-direction: column;
+    height: auto;
+  }
+  .work-process-flex .work-process-row3 {
+    flex-direction: column;
+    height: auto;
+  }
+  .work-process-flex .work-process-background {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    width: 32vh;
+    cursor: pointer;
+    height: 32vh;
+    background-color: #112240;
+    position: absolute;
+    top: 1.5vh;
+    right: 1.5vh;
+    bottom: 2vh;
+  }
+  .work-process-flex p {
+    font-size: 0.7rem;
+  }
+  .work-process-flex h2 {
+    font-size: 0.7rem;
+  }
+  .work-process-flex h3 {
+    font-size: 1.2rem;
+  }
+  .work-process-flex h1 {
+    font-size: 1.5rem;
+  }
+  .work-process-flex img {
+    background-color: inherit;
+    height: auto;
+    width: 100%;
+    max-width: 13vh;
+  }
+  .work-process-flex .work-process-element {
+    display: flex;
+    align-items: center;
+    width: 32vh;
+    height: 32vh;
+    background-color: #64FFDA;
+    z-index: 10;
+  }
+  .work-process-flex .work-process-element-outline {
+    display: flex;
+    align-items: center;
+    width: 32vh;
+    height: 32vh;
+    background-color: #0A192F;
+    border: 1px solid #64FFDA;
+    z-index: 10;
+  }
+}
+.portfolio-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.portfolio-section a {
+  text-align: center;
+  margin: 15px 5px 15px 5px;
+  border-radius: 3px;
+  position: relative;
+  border: 2px solid #64FFDA;
+  padding: 15px 45px 15px 45px;
+  color: #64FFDA;
+  top: 5vh;
+  text-decoration: none;
+  font-family: "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono", monospace;
+}
+.portfolio-section .heading_line {
+  display: flex;
+  height: auto;
+  width: auto;
+  flex-direction: row;
+  align-items: center;
+  padding-left: 2vw;
+  padding-right: 2vw;
+  margin-bottom: 3rem;
+}
+.portfolio-section .highlight-text {
+  color: #64FFDA;
+  font-family: "Calibre", "Inter", "San Francisco", "SF Pro Text", -apple-system, system-ui, sans-serif;
+}
+.portfolio-section h1 {
+  font-family: "Calibre", "Inter", "San Francisco", "SF Pro Text", -apple-system, system-ui, sans-serif;
+  color: white;
+  font-size: 1.8rem;
+}
+.portfolio-section .heading-line-text {
+  display: flex;
+  height: auto;
+  align-items: center;
+}
+.portfolio-section .main_highlight {
+  font-size: 1rem;
+  padding: 0.5vh;
+  font-family: "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono", monospace;
+  font-weight: lighter;
+  color: #64FFDA;
+}
+.portfolio-section .line {
+  width: 25vh;
+  padding: 3rem;
+}
+
+.project-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+  height: 200vh;
+}
+
+.project-text {
+  margin: 1vh;
+}
+.project-text p {
+  font-family: "Calibre", "Inter", "San Francisco", "SF Pro Text", -apple-system, system-ui, sans-serif;
+  color: white;
+  font-size: 0.9rem;
+}
+
+.project {
+  display: flex;
+  flex-direction: row;
+  width: 70%;
+  justify-content: space-evenly;
+  margin: 2vh 2vw;
+  height: 30vh;
+}
+
+.text-project {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+}
+
+.project-heading {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 10vh;
+  width: 100%;
+}
+.project-heading img {
+  width: 20vh;
+  padding: 1rem;
+}
+.project-heading h1 {
+  font-family: "Calibre", "Inter", "San Francisco", "SF Pro Text", -apple-system, system-ui, sans-serif;
+  color: white;
+  font-size: 1.2rem;
+}
+
+.picture-project {
+  max-width: 25vh;
+  width: 100%;
+  position: relative;
+  margin: 5vh;
+  display: flex;
+  height: 30vh;
+  justify-content: center;
+}
+
+.work-process-element {
+  display: flex;
+  align-items: center;
+  width: 24vh;
+  height: 24vh;
+  background-color: #64FFDA;
+  z-index: 10;
+}
+
+.background-picture-project {
+  display: flex;
+  align-items: center;
+  width: 25vh;
+  height: 25vh;
+  background-color: #64FFDA;
+}
+
+.background-picture-project-outline {
+  display: flex;
+  align-items: center;
+  width: 25vh;
+  height: 25vh;
+  background-color: #0A192F;
+  border: 1px solid #64FFDA;
+}
+
+.front-picture-project {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  width: 25vh;
+  cursor: pointer;
+  height: 25vh;
+  background-color: #112240;
+  position: absolute;
+  left: -3vw;
+  top: -3vh;
+}
+
+.front-picture-project-outline {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  width: 25vh;
+  cursor: pointer;
+  height: 25vh;
+  background-color: #112240;
+  position: absolute;
+  right: 0vh;
+  left: 3vw;
+  top: -3vh;
+}
+
+.project-brake {
+  height: 10px;
+}
+
+@media (max-width: 846px) {
+  .project {
+    padding: 3rem;
+  }
+  .project .picture-project {
+    padding-top: 3em;
+    margin: 3vh;
+  }
+  .project .text-project {
+    padding: 3px;
+  }
+  .project p {
+    font-size: 0.7rem;
+  }
+  .project .front-picture-project {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    width: 14vh;
+    cursor: pointer;
+    height: 14vh;
+    background-color: #112240;
+    position: absolute;
+    left: 3vh;
+    top: 3vh;
+  }
+  .project .front-picture-project-outline {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    width: 14vh;
+    cursor: pointer;
+    height: 14vh;
+    background-color: #112240;
+    position: absolute;
+    left: 3vh;
+    top: 3vh;
+  }
+  .project .background-picture-project {
+    display: flex;
+    align-items: center;
+    width: 14vh;
+    height: 14vh;
+    background-color: #64FFDA;
+  }
+  .project .background-picture-project-outline {
+    display: flex;
+    align-items: center;
+    width: 14vh;
+    height: 14vh;
+    background-color: #0A192F;
+    border: 1px solid #64FFDA;
+  }
+}
+.blog-section {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.blog-section .heading_line {
+  display: flex;
+  height: auto;
+  width: auto;
+  align-items: center;
+  margin-bottom: 3rem;
+}
+.blog-section .highlight-text {
+  color: #64FFDA;
+  font-family: "Calibre", "Inter", "San Francisco", "SF Pro Text", -apple-system, system-ui, sans-serif;
+}
+.blog-section h1 {
+  font-family: "Calibre", "Inter", "San Francisco", "SF Pro Text", -apple-system, system-ui, sans-serif;
+  color: white;
+  font-size: 1.8rem;
+}
+.blog-section .heading-line-text {
+  display: flex;
+  height: auto;
+  align-items: center;
+}
+.blog-section .main_highlight {
+  font-size: 1rem;
+  padding: 0.5vh;
+  font-family: "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono", monospace;
+  font-weight: lighter;
+  color: #64FFDA;
+}
+.blog-section .line {
+  width: 45vh;
+  padding: 3rem;
+}
+
+.blog-container {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  margin: 10%;
+  width: 80%;
+}
+
+.blog {
+  width: 100%;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  height: 45vh;
+}
+.blog .blog-front {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  width: 100%;
+  cursor: pointer;
+  height: 25vh;
+  background-color: #112240;
+  position: absolute;
+  right: 5vh;
+  left: 5.5vw;
+  top: 2vh;
+}
+.blog .blog-background-outline {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin-left: 6.5vw;
+  height: 25vh;
+  background-color: #0A192F;
+  border: 1px solid #64FFDA;
+}
+.blog .blog-background {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin-left: 6.5vw;
+  height: 25vh;
+  background-color: #64FFDA;
+}
+.blog h1 {
+  font-family: "Calibre", "Inter", "San Francisco", "SF Pro Text", -apple-system, system-ui, sans-serif;
+  color: "Calibre", "Inter", "San Francisco", "SF Pro Text", -apple-system, system-ui, sans-serif;
+  background-color: inherit;
+  font-size: 1.3rem;
+  padding: 1vh 1vw;
+}
+.blog .text-in-blog {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  align-items: flex-start;
+  width: 75%;
+  background-color: inherit;
+}
+.blog .text-in-blog h2 {
+  font-family: "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono", monospace;
+  color: #64FFDA;
+  font-size: 1.1rem;
+  background-color: #112240;
+  margin-top: 1vh;
+  margin-bottom: 1vh;
+  font-weight: lighter;
+}
+.blog p {
+  font-family: "Calibre", "Inter", "San Francisco", "SF Pro Text", -apple-system, system-ui, sans-serif;
+  color: #C5C6C7;
+  font-size: 1rem;
+  background-color: #112240;
+}
+.blog a {
+  text-align: center;
+  font-size: 0.8rem;
+  color: #64FFDA;
+  font-family: "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono", monospace;
+  text-decoration: underline;
+  background-color: inherit;
+  padding: 1vh 1vw;
+}
+
+@media (max-width: 732px) {
+  .blog h1 {
+    font-size: 1rem;
+  }
+  .blog p {
+    font-size: 0.8rem;
+  }
+  .blog .blog-front {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    width: 21em;
+    cursor: pointer;
+    height: 25vh;
+    background-color: #112240;
+    position: absolute;
+    right: 5vh;
+    left: 5.5vw;
+    top: 2vh;
+  }
+  .blog .blog-background {
+    display: flex;
+    align-items: center;
+    width: 22em;
+    margin-left: 6.5vw;
+    height: 25vh;
+    background-color: #64FFDA;
+  }
+  .blog .blog-background-outline {
+    display: flex;
+    align-items: center;
+    width: 22em;
+    margin-left: 6.5vw;
+    height: 25vh;
+    background-color: #0A192F;
+    border: 1px solid #64FFDA;
+  }
+}
+@media (max-width: 556px) {
+  .blog h1 {
+    font-size: 1rem;
+  }
+  .blog p {
+    font-size: 0.8rem;
+  }
+  .blog .blog-front {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    width: 17em;
+    cursor: pointer;
+    height: 25vh;
+    background-color: #112240;
+    position: absolute;
+    right: 5vh;
+    left: 5.5vw;
+    top: 2vh;
+  }
+  .blog .blog-background {
+    display: flex;
+    align-items: center;
+    width: 18em;
+    margin-left: 6.5vw;
+    height: 25vh;
+    background-color: #64FFDA;
+  }
+  .blog .blog-background-outline {
+    display: flex;
+    align-items: center;
+    width: 18em;
+    margin-left: 6.5vw;
+    height: 25vh;
+    background-color: #0A192F;
+    border: 1px solid #64FFDA;
+  }
+}
+.background-picture-project {
+  display: flex;
+  align-items: center;
+  width: 25vh;
+  height: 25vh;
+  background-color: #64FFDA;
+}
+
+.background-picture-project-outline {
+  display: flex;
+  align-items: center;
+  width: 25vh;
+  height: 25vh;
+  background-color: #0A192F;
+  border: 1px solid #64FFDA;
+}
+
+.skill .skill-front {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  width: 25vw;
+  cursor: pointer;
+  height: 25vh;
+  background-color: #112240;
+  position: absolute;
+  right: 5vh;
+  left: 5.5vw;
+  top: 2vh;
+}
+
+.skill-section .heading_line {
+  display: flex;
+  height: auto;
+  width: auto;
+  align-items: center;
+  margin-bottom: 3rem;
+}
+.skill-section .highlight-text {
+  color: #64FFDA;
+  font-family: "Calibre", "Inter", "San Francisco", "SF Pro Text", -apple-system, system-ui, sans-serif;
+}
+.skill-section h1 {
+  font-family: "Calibre", "Inter", "San Francisco", "SF Pro Text", -apple-system, system-ui, sans-serif;
+  color: white;
+  font-size: 1.8rem;
+}
+.skill-section .heading-line-text {
+  display: flex;
+  height: auto;
+  align-items: center;
+}
+.skill-section .main_highlight {
+  font-size: 1rem;
+  padding: 0.5vh;
+  font-family: "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono", monospace;
+  font-weight: lighter;
+  color: #64FFDA;
+}
+.skill-section .line {
+  width: 45vh;
+  padding: 3rem;
+}
+
+.skill .blog-front {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  width: 100%;
+  cursor: pointer;
+  height: 25vh;
+  background-color: #112240;
+  position: absolute;
+  right: 5vh;
+  left: 5.5vw;
+  top: 2vh;
+}
+.skill .blog-background-outline {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin-left: 6.5vw;
+  height: 25vh;
+  background-color: #0A192F;
+  border: 1px solid #64FFDA;
+}
+.skill .blog-background {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin-left: 6.5vw;
+  height: 25vh;
+  background-color: #64FFDA;
+}
+.skill h1 {
+  font-family: "Calibre", "Inter", "San Francisco", "SF Pro Text", -apple-system, system-ui, sans-serif;
+  color: "Calibre", "Inter", "San Francisco", "SF Pro Text", -apple-system, system-ui, sans-serif;
+  background-color: inherit;
+  font-size: 1.3rem;
+  padding: 1vh 1vw;
+}
+.skill .text-in-blog {
+  display: flex;
+  align-items: flex-start;
+  width: 75%;
+}
+.skill p {
+  font-family: "Calibre", "Inter", "San Francisco", "SF Pro Text", -apple-system, system-ui, sans-serif;
+  color: #C5C6C7;
+  font-size: 1rem;
+  background-color: #112240;
+}
+.skill a {
+  text-align: center;
+  font-size: 0.8rem;
+  color: #64FFDA;
+  font-family: "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono", monospace;
+  text-decoration: underline;
+  background-color: inherit;
+  padding: 1vh 1vw;
+}
+
+.background-picture-project {
+  display: flex;
+  align-items: center;
+  width: 25vh;
+  height: 25vh;
+  background-color: #64FFDA;
+}
+
+.background-picture-project-outline {
+  display: flex;
+  align-items: center;
+  width: 25vh;
+  height: 25vh;
+  background-color: #0A192F;
+  border: 1px solid #64FFDA;
+}
+
+.margin {
+  margin-top: 15vh;
+  margin-bottom: 15vh;
+}
+
+.blog-front-new {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  width: 100%;
+  cursor: pointer;
+  height: 55vh;
+  background-color: #112240;
+  position: absolute;
+  right: 5vh;
+  left: 5.5vw;
+  top: 2vh;
+}
+.blog-front-new img {
+  max-width: 8vw;
+  padding: 1vh;
+  background-color: inherit;
+  height: auto;
+  width: 100%;
+}
+
+.blog-background-new {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin-left: 6.5vw;
+  height: 55vh;
+  background-color: #64FFDA;
+}
+
+.image_div {
+  flex-direction: row;
+  display: flex;
+  height: 5vh;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  background-color: inherit;
+}
+.image_div img {
+  height: auto;
+  width: 100%;
+  margin: 1vh;
+  max-width: 2vw;
+}
+
+.skill-container {
+  display: flex;
+  height: 250vh;
+  width: 95%;
+  align-items: center;
+  flex-direction: column;
+  padding: 50px;
+}
+
+.skill-section {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.skill-front-new {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  position: relative;
+  width: 95%;
+  cursor: pointer;
+  height: 95%;
+  background-color: #112240;
+  z-index: 3;
+}
+
+.skill-background-new {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  width: 95%;
+  top: -5%;
+  right: -5%;
+  height: 95%;
+  background-color: #0A192F;
+  border: 1px solid #64FFDA;
+}
+
+.skill {
+  height: 40em;
+  width: 40em;
+  display: flex;
+  position: relative;
+  align-items: center;
+  margin-bottom: 5em;
+}
+.skill img {
+  height: auto;
+  width: 100%;
+  max-width: 5vw;
+  margin: 1vh;
+  background-color: inherit;
+}
+.skill h1 {
+  color: white;
+  font-size: 1.4rem;
+}
+
+.text-in-skill {
+  margin: 1vh;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 50%;
+  background-color: inherit;
+  height: 15vh;
+  text-align: left;
+}
+.text-in-skill .text-in-skill-highlight {
+  color: #64FFDA;
+  background-color: inherit;
+}
+.text-in-skill h2 {
+  margin-bottom: 1.5vh;
+  margin-top: 1.5vh;
+  font-size: 1rem;
+  font-family: "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono", monospace;
+  color: #64FFDA;
+  font-weight: lighter;
+  background-color: inherit;
+}
+
+.image_container {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: flex-start;
+  background-color: inherit;
+  height: 5vh;
+}
+.image_container img {
+  max-width: 27px;
+  height: auto;
+  width: 100%;
+  background-color: inherit;
+}
+
+.contact_me-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.contact-me-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.text-in-contact-me {
+  width: 80%;
+  margin-left: 10%;
+  margin-right: 10%;
+  font-family: "Calibre", "Inter", "San Francisco", "SF Pro Text", -apple-system, system-ui, sans-serif;
+  color: #C5C6C7;
+}
+.text-in-contact-me p {
+  color: white;
+}
+.text-in-contact-me .contact_me-textpart {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 25em;
+}
+
+.contact-me-part-container {
+  position: relative;
+  width: 80vh;
+  margin-left: 10%;
+  margin-right: 10%;
+  height: 50vh;
+}
+
+.contact-part {
+  margin: 8vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.contact-part a {
+  cursor: pointer;
+  text-align: center;
+  margin: 15px 5px 15px 5px;
+  border-radius: 3px;
+  position: relative;
+  border: 2px solid #64FFDA;
+  padding: 15px 45px 15px 45px;
+  color: #64FFDA;
+  top: 5vh;
+  text-decoration: none;
+  font-family: "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono", monospace;
+}
+.contact-part a:hover {
+  transition: 0.4s;
+  background-color: #64FFDA;
+  color: #0A192F;
+}
+.contact-part .twitter {
+  cursor: pointer;
+  text-align: center;
+  margin: 15px 5px 15px 5px;
+  border-radius: 3px;
+  position: relative;
+  border: 2px solid #64FFDA;
+  padding: 15px 56px 15px 56px;
+  color: #64FFDA;
+  top: 5vh;
+  text-decoration: none;
+  font-family: "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono", monospace;
+}
+.contact-part .twitter:hover {
+  transition: 0.4s;
+  background-color: #64FFDA;
+  color: #0A192F;
+}
+.contact-part .Email {
+  cursor: pointer;
+  text-align: center;
+  margin: 15px 5px 15px 5px;
+  border-radius: 3px;
+  position: relative;
+  border: 2px solid #64FFDA;
+  padding: 15px 65px 15px 65px;
+  color: #64FFDA;
+  top: 5vh;
+  text-decoration: none;
+  font-family: "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono", monospace;
+}
+.contact-part .Email:hover {
+  transition: 0.4s;
+  background-color: #64FFDA;
+  color: #0A192F;
+}
+
+.contact-me-front {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  width: 29em;
+  height: 55vh;
+  background-color: #112240;
+  position: absolute;
+  right: 7em;
+  bottom: 0;
+  top: 2vh;
+}
+.contact-me-front ::placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: #C5C6C7;
+  opacity: 0.1;
+}
+.contact-me-front input {
+  background-color: #112240;
+  border: 1px solid #64FFDA;
+  color: #64FFDA;
+  font-family: "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono", monospace;
+  width: 100%;
+  height: 2vh;
+  margin: 1vh;
+}
+.contact-me-front .button_submit {
+  display: flex;
+  background-color: #112240;
+  border: 1px solid #64FFDA;
+  color: #64FFDA;
+  border-radius: 7px;
+  text-align: center;
+  justify-content: center;
+  cursor: pointer;
+  font-family: "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono", monospace;
+  width: 100%;
+  height: 2vh;
+  margin: 1vh;
+}
+.contact-me-front textarea {
+  background-color: #112240;
+  border: 1px solid #64FFDA;
+  color: #64FFDA;
+  font-family: "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono", monospace;
+  width: 100%;
+  height: 2vh;
+  margin: 1vh;
+}
+.contact-me-front label {
+  font-family: "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono", monospace;
+  color: #64FFDA;
+  font-size: 0.8rem;
+  background-color: inherit;
+  margin-left: 1vh;
+  margin-top: 0.5vh;
+  margin-bottom: 0.5vh;
+}
+.contact-me-front form {
+  background-color: inherit;
+}
+
+.container-for-inputs {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  background-color: inherit;
+}
+
+.contact-me-background {
+  display: flex;
+  align-items: center;
+  width: 29em;
+  height: 55vh;
+  background-color: #0A192F;
+  border: 1px solid #64FFDA;
+}
+
+.portfolio-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.portfolio-container .portfolio-row1 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+.portfolio-container .portfolio-project:hover {
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 8px 12px;
+  transition: 500ms;
+}
+.portfolio-container .portfolio-project {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  width: 23rem;
+  height: 14rem;
+  background-color: #112240;
+  margin: 0.8rem;
+  border-radius: 6px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.portfolio-container .portfolio-project .top-div {
+  flex-direction: row;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: inherit;
+  height: auto;
+}
+.portfolio-container .portfolio-project .image-div {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: auto;
+  background-color: inherit;
+}
+.portfolio-container .portfolio-project .share-div {
+  display: flex;
+  flex-direction: row;
+  height: auto;
+  background-color: inherit;
+}
+.portfolio-container .portfolio-project h1 {
+  font-family: "Calibre", "Inter", "San Francisco", "SF Pro Text", -apple-system, system-ui, sans-serif;
+  color: white;
+  background-color: #112240;
+  font-size: 1.2rem;
+}
+.portfolio-container .portfolio-project .img-left {
+  width: 100%;
+  max-width: 2rem;
+  height: auto;
+  margin: 1rem;
+  background-color: #112240;
+  cursor: pointer;
+}
+.portfolio-container .portfolio-project .img-git {
+  width: 100%;
+  max-width: 1.7rem;
+  height: auto;
+  margin: 0.6rem;
+  background-color: #112240;
+  cursor: pointer;
+}
+.portfolio-container .portfolio-project .img-right {
+  width: 100%;
+  max-width: 1.2rem;
+  height: auto;
+  margin: 0.6rem;
+  background-color: #112240;
+  cursor: pointer;
+}
+.portfolio-container .portfolio-project p {
+  font-size: 0.7rem;
+  background-color: #112240;
+  margin: 1rem;
+  font-family: "Calibre", "Inter", "San Francisco", "SF Pro Text", -apple-system, system-ui, sans-serif;
+  color: white;
+}
+.portfolio-container .portfolio-project .text-project {
+  margin-top: 1rem;
+  width: 100%;
+  text-align: center;
+  background-color: inherit;
+}
+.portfolio-container .portfolio-project .text-project-text-part {
+  text-align: center;
+  width: 100%;
+  background-color: inherit;
+  margin-bottom: 1.2rem;
+}
+.portfolio-container .portfolio-project .skill-part-porfolio {
+  z-index: 4;
+  flex-direction: row;
+  display: flex;
+  justify-content: space-evenly;
+  background-color: inherit;
+}
+.portfolio-container .portfolio-project .skill-part-porfolio p {
+  font-family: "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono", monospace;
+  color: #C5C6C7;
+  margin: 0.2rem;
+  background-color: inherit;
+}
+@media (max-width: 974px) {
+  .portfolio-container .portfolio-row1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+  .portfolio-container .portfolio-project {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    height: 14rem;
+    background-color: #112240;
+    margin: 0.8rem;
+    border-radius: 6px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  }
+}
+
+@media (max-width: 986px) {
+  .skill {
+    height: 20em;
+    width: 20em;
+  }
+  .skill-front-new p {
+    font-size: 0.6rem;
+  }
+  .skill-front-new h2 {
+    font-size: 0.7rem;
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */
