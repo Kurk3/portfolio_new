@@ -728,7 +728,7 @@ html, body {
   flex-direction: column;
   align-items: center;
 
-
+/*
   a {
     text-align: center;
     margin: 15px 5px 15px 5px;
@@ -740,7 +740,16 @@ html, body {
     top: 5vh;
     text-decoration: none;
     font-family: $mono_font;
+  }*/
+
+  a {
+    background-color: inherit;
+    margin: 0;
+    padding: 0;
+
   }
+
+
 
 
   .heading_line {

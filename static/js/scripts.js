@@ -158,9 +158,34 @@ $(document).ready(function () {
     });
 
     $("#4").mouseleave(function () {
-
     });
 });
+
+
+$(document).ready(function () {
+
+    $("#5").mouseover(function () {
+        $("#project5").css("color", "#64FFDAFF").css("transition","400ms");
+    });
+
+    $("#5").mouseleave(function () {
+        $("#project5").css("color", "white").css("transition","400ms");
+    });
+});
+
+$(document).ready(function () {
+
+    $("#6").mouseover(function () {
+        $("#project6").css("color", "#64FFDAFF").css("transition","400ms");
+    });
+
+    $("#6").mouseleave(function () {
+        $("#project6").css("color", "white").css("transition","400ms");
+    });
+});
+
+
+
 
 // function myFunction() {
 //     var x = document.getElementById("myTopnav");

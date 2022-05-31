@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css"/>
+    <link rel="stylesheet" href="/static/styles/styles.css">
+    <meta content="width=device-width, initial-scale=1" name="viewport"/>
+    <link href="{{ url_for('static', filename='styles/styles.css') }}"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <title>Adam Kurek</title>
+    <script src="/static/js/scripts.js"></script>
+</head>
+<body>
+
+
+<div class="topnav" data-aos="fade-up" id="myTopnav" data-aos-duration="650" data-aos-once="true">
+    <a href="#contact" class="topnav-scroll"> Contact</a>
+    <a href="#about"><span> 01.</span>About</a>
+    <a href="#portfolio"><span>02.</span>Portfolio</a>
+    <a href="https://www.youtube.com"><span>03.</span>Blog</a>
+    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+        <i class="fa fa-bars"></i>
+    </a>
+
+</div>
+
+
+<div class="container">
+    <div class="left-side">
+        <div class="bottom-left-nav">
+            <a href="https://github.com/Kurk3"><img class="icon" src="/static/img/github.png"></a>
+            <a href="https://www.instagram.com/adamkurek_/"><img class="icon" src="/static/img/instagram.png"></a>
+            <a href="https://twitter.com/AdamKurek19"><img class="icon" src="/static/img/twitter.png"></a>
+            <a href="https://www.linkedin.com/in/adam-kurek-665b8522a/"><img class="icon"
+                                                                             src="/static/img/linkedin.png"></a>
+            <img class="line" src="/static/img/vertical-line.png">
+        </div>
+    </div>
+
+    <div class="center-content">
+        <section class="entry-section">
+            <div class="align-left">
+                <h1>Hello,</h1>
+                <h1>I am Adam Kurek</h1>
+                <h3>web developer</h3>
+                <h2 data-aos="fade-left" data-aos-duration="3000" data-aos-once="true">Frontend Developer</h2>
+                <a href="" data-aos="fade-up" data-aos-duration="1500">Contact me</a>
+            </div>
+        </section>
+
+        <div class="brake">
+        </div>
+
+        <section class="about-section" id="about">
+            <div class="heading_line">
+                <h1><span class="main_highlight">01.</span>About Me</h1>
+                <img class="line" src="/static/img/horizontal_line.png">
+            </div>
+            <div class="content-about-page">
+                <div class="text">
+                    <p>Hi I'm Adam I am a web developer whose main focus is Frontend. The technologies I use are <span
+                            class="highlight-text hover-underline-animation">HTML</span>,
+                        <span class="highlight-text hover-underline-animation">JavaScript</span>, <span
+                                class="highlight-text hover-underline-animation">CSS</span> more
+                        specifically <span class="highlight-text hover-underline-animation">React.js</span> and <span
+                                class="highlight-text hover-underline-animation">Tailwind CSS</span>. <br>
+
+                        The backend technologies I use are mainly <span
+                                class="highlight-text hover-underline-animation">Python(Flask)</span>
+                        and <span class="highlight-text hover-underline-animation">Express.JS</span>.
+                    <p>
+                        Also well organised person, systematic problem solver. Stubborn book
+                        reader hiker and fitness lover.
+                    </p>
+                    <br>
+                    <p>
+                        I have a blog where I document my coding journey. You can find it right here: <span
+                            class="invincible">_</span><a href="/blog" class="blog-about-me hover-underline-animation">Blog </a>
+                    </p>
+                </div>
+
+
+                <div class="picture">
+                    <div class="front"></div>
+                    <img class="back" src="/static/img/photomy.png">
+                </div>
+            </div>
+        </section>
+
+        <section class="portfolio-section" id="portfolio">
+            <div class="sectional-brake"></div>
+            <div class="heading_line">
+                <img class="line" src="/static/img/horizontal_line.png">
+                <div class="work-process-heading">
+                    <h1><span class="main_highlight">02.</span>Portfolio Projects</h1>
+                </div>
+                <img class="line" src="/static/img/horizontal_line.png">
+            </div>
+
+            <div class="portfolio-container">
+                <div class="portfolio-row1">
+                    <div class="portfolio-project" id="1">
+                        <div class="top-div">
+                            <div class="image-div">
+                                <img class="img-left" src="/static/img/img_35.png">
+                            </div>
+
+                            <div class="share-div">
+                                <a href="https://github.com/Kurk3/Learnet_with_Login"><img class="img-git" src="/static/img/github.png"></a>
+                                <a href="https://learnet-network.herokuapp.com/"><img class="img-right" src="/static/img/share.png"></a>
+                            </div>
+                        </div>
+
+                        <div class="text-project">
+
+                            <h1 id="project1">Learnet (Networking app)</h1>
+                            <div class="text-project-text-part">
+                                <p>This website was created to teach users the basics of Computer Networking</p>
+                            </div>
+
+                            <div class="skill-part-porfolio">
+                                <p>Flask</p>
+                                <p>SCSS,HTML</p>
+                                <p>JavaScript</p>
+                            </div>
+                            <div class="skill-part-porfolio">
+                                <p>Python</p>
+                                <p>PostgreSQL</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="portfolio-project" id="2">
+                        <div class="top-div">
+                            <div class="image-div">
+                                <img class="img-left" src="/static/img/img_35.png">
+                            </div>
+
+                            <div class="share-div">
+                                <a href="https://github.com/Kurk3/FrontendMentor"><img class="img-git" src="/static/img/github.png"></a>
+                                <a href="https://github.com/Kurk3/FrontendMentor"><img class="img-right" src="/static/img/share.png"></a>
+                            </div>
+                        </div>
+
+                        <div class="text-project">
+                            <h1 id="project2">Frontend Challenges</h1>
+                            <div class="text-project-text-part">
+                                <p>
+                                    This app was created to provide users with assignments for Javascript projects.
+                                </p>
+                            </div>
+
+                            <div class="skill-part-porfolio">
+                                <p>Flask</p>
+                                <p>SCSS,HTML</p>
+                                <p>Typescript</p>
+                            </div>
+                            <div class="skill-part-porfolio">
+                                <p>Python</p>
+                                <p>PostgreSQL</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="portfolio-row1">
+                    <div class="portfolio-project" id="3">
+                        <div class="top-div">
+                            <div class="image-div">
+                                <img class="img-left" src="/static/img/img_35.png">
+                            </div>
+
+                            <div class="share-div">
+                                <a href="https://github.com/Kurk3/WeatherApplication"><img class="img-git" src="/static/img/github.png"></a>
+                                <a href="https://github.com/Kurk3/WeatherApplication"><img class="img-right" src="/static/img/share.png"></a>
+                            </div>
+                        </div>
+
+                        <div class="text-project">
+                            <h1 id="project3">Weather Application</h1>
+                            <div class="text-project-text-part">
+                                <p>Application that will show you weather that will take and show you current weather
+                                    from third
+                                    party API. </p>
+                            </div>
+
+                            <div class="skill-part-porfolio">
+                                <p>Flask</p>
+                                <p>SCSS,HTML</p>
+                                <p>API</p>
+                                <p>JavaScript</p>
+                            </div>
+
+                            <div class="skill-part-porfolio">
+                                <p>Python</p>
+                                <p>SQLite</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="portfolio-project" id="4">
+                        <div class="top-div">
+                            <div class="image-div">
+                                <img class="img-left" src="/static/img/img_35.png">
+                            </div>
+
+                            <div class="share-div">
+                                <a href="https://github.com/Kurk3/FlaskBlogBackend"><img class="img-git" src="/static/img/github.png"></a>
+                                <a href="https://github.com/Kurk3/FlaskBlogBackend"><img class="img-right" src="/static/img/share.png"></a>
+                            </div>
+                        </div>
+
+
+                        <div class="text-project">
+                            <h1 id="project4">Forum for programmers</h1>
+                            <div class="text-project-text-part">
+                                <p>This app was build to provide a forum where programmers can post delete and like
+                                    their questions.</p>
+                            </div>
+
+                            <div class="skill-part-porfolio">
+                                <p>Flask</p>
+                                <p>SCSS,HTML</p>
+                                <p>TypeScript</p>
+                            </div>
+
+                            <div class="skill-part-porfolio">
+                                <p>Python</p>
+                                <p>SQLite</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="portfolio-row1">
+                    <div class="portfolio-project" id="5">
+                        <div class="top-div">
+                            <div class="image-div">
+                                <img class="img-left" src="/static/img/img_35.png">
+                            </div>
+
+                            <div class="share-div">
+                                <a href="https://github.com/Kurk3/blog-app"><img class="img-git" src="/static/img/github.png"></a>
+                                <a href="https://github.com/Kurk3/blog-app"><img class="img-right" src="/static/img/share.png"></a>
+                            </div>
+                        </div>
+
+                        <div class="text-project">
+                            <h1 id="project5">My Blog</h1>
+                            <div class="text-project-text-part">
+                                <p>This is blog app where I write about myself ( About my productivity habits how I
+                                    learn etc.. ) </p>
+                            </div>
+
+                            <div class="skill-part-porfolio">
+                                <p>Flask</p>
+                                <p>SCSS</p>
+                                <p>HTML</p>
+                            </div>
+
+                            <div class="skill-part-porfolio">
+                                <p>Python</p>
+                                <p>JavaScript</p>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="portfolio-project" id="6">
+                        <div class="top-div">
+                            <div class="image-div">
+                                <img class="img-left" src="/static/img/img_35.png">
+                            </div>
+
+                            <div class="share-div">
+                                <a href="https://github.com/Kurk3/Login_register"><img class="img-git" src="/static/img/github.png"></a>
+                                <a href="https://github.com/Kurk3/Login_register"><img class="img-right" src="/static/img/share.png"></a>
+                            </div>
+                        </div>
+
+
+                        <div class="text-project">
+                            <h1 id="project6">Login / Register</h1>
+                            <div class="text-project-text-part">
+                                <p>My first Web Development project where users can Login and Register </p>
+                            </div>
+
+                            <div class="skill-part-porfolio">
+                                <p>Flask</p>
+                                <p>HTML</p>
+                                <p>Bootstrap</p>
+                            </div>
+
+                            <div class="skill-part-porfolio">
+                                <p>Python</p>
+                                <p>PostgreSQL</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="contact_me-section" id="contact">
+            <div class="sectional-brake"></div>
+            <div class="heading_line2">
+                <img class="line" src="/static/img/horizontal_line.png">
+                <div class="work-process-heading">
+                    <h6>let's have a call.</h6>
+                    <h1>Contact me.</h1>
+                </div>
+                <img class="line" src="/static/img/horizontal_line.png">
+            </div>
+
+            <div class="contact-me-container">
+                <div class="contact_me-textpart">
+                    <div class="text-in-contact-me">
+                        <p> Interested in entire spectrum of web development from frontend to backend so
+                            if you have any ideas that want to be realised hit me with message or send me an email.
+                        </p>
+                    </div>
+                </div>
+                <div class="contact-part">
+                    <a href="https://www.linkedin.com/in/adam-kurek-665b8522a/">Linked-in</a>
+                    <a href="https://www.instagram.com/adamkurek_/">Instagram</a>
+                    <a href="https://twitter.com/AdamKurek19" class="twitter">Twitter</a>
+                    <a href="mailto:kurekadam314@gmail.com" class="Email">Email</a>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <div class="right-side">
+        <div class="bottom-right-nav">
+            <a href="mailto:kurekadam314@gmail.com">kurekadam314@gmail.com</a>
+            <img class="line" src="/static/img/vertical-line.png">
+        </div>
+    </div>
+</div>
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
+    AOS.init({
+        duration: 3000,
+        once: true,
+    });
+    window.addEventListener('load', AOS.refresh)
+</script>
+</body>
+</html>
